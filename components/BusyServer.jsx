@@ -8,7 +8,7 @@ export default function BusyServer() {
 				<ExclamationCircleIcon className="h-16 w-16 text-blue-600 animate-spin" />
 			</div>
 			<h2 className="text-3xl font-bold text-gray-800 mb-2">
-				We're Busy!
+				We are Busy!
 			</h2>
 			<p className="text-lg text-gray-600 mb-4">
 				Our servers are currently processing your request. Please wait a
