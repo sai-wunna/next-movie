@@ -1,11 +1,11 @@
 import React from "react";
-import { SpinnerIcon } from "@heroicons/react/24/outline"; // Ensure you have this icon installed
+import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 
 const BusyServer = () => {
 	return (
 		<div className="flex flex-col items-center justify-center h-screen bg-gray-100">
 			<div className="flex items-center mb-4">
-				<SpinnerIcon className="h-16 w-16 text-blue-600 animate-spin" />
+				<ExclamationCircleIcon className="h-16 w-16 text-blue-600 animate-spin" />
 			</div>
 			<h2 className="text-3xl font-bold text-gray-800 mb-2">
 				We're Busy!
