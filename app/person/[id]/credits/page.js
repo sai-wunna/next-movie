@@ -5,6 +5,7 @@ import MovieList from "@/components/Lists/MovieList";
 import TVList from "@/components/Lists/TVList";
 import React from "react";
 import Image from "next/image";
+import BusyServer from "@/components/BusyServer";
 
 export default async function page({ params }) {
 	const { id } = params;
