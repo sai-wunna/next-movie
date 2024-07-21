@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
-export default () => {
+export default function Loading() {
 	const router = useRouter();
 
 	useEffect(() => {
@@ -17,4 +17,4 @@ export default () => {
 			</div>
 		</div>
 	);
-};
+}

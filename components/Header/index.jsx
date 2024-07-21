@@ -12,7 +12,7 @@ import Sidebar from "../Sidebar";
 import SearchBox from "./SearchBox";
 import ThemeToggler from "../ThemeToggler";
 
-export default () => {
+export default function Header() {
 	return (
 		<div
 			className="p-2 sticky top-0 right-0 w-[100%] bg-white bg-opacity-70 backdrop-blur-md z-50"
@@ -48,4 +48,4 @@ export default () => {
 			</div>
 		</div>
 	);
-};
+}

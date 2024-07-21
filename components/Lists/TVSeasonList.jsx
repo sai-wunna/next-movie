@@ -84,7 +84,7 @@ const Season = ({ season, tvId }) => {
 	);
 };
 
-export default ({ tvId, seasons }) => {
+export default function TVSeasonList({ tvId, seasons }) {
 	return (
 		<div className="container mx-auto py-8">
 			<h3 className="text-2xl font-bold mb-4">Seasons</h3>
@@ -112,4 +112,4 @@ export default ({ tvId, seasons }) => {
 			</div>
 		</div>
 	);
-};
+}

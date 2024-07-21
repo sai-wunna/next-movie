@@ -86,7 +86,7 @@ export const TVItem = ({ tv }) => (
 	</div>
 );
 
-export default ({ tvs }) => {
+export default function TVList({ tvs }) {
 	return (
 		<>
 			{tvs && typeof tvs === "object" ? (
@@ -102,4 +102,4 @@ export default ({ tvs }) => {
 			)}
 		</>
 	);
-};
+}

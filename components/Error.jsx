@@ -2,7 +2,7 @@
 import React from "react";
 import { ExclamationCircleIcon } from "@heroicons/react/24/solid";
 
-export default () => {
+export default function Error() {
 	return (
 		<div className="flex flex-col items-center justify-center h-[80vh]">
 			<div className="bg-white p-6 text-center max-w-md mx-auto">
@@ -22,4 +22,4 @@ export default () => {
 			</div>
 		</div>
 	);
-};
+}

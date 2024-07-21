@@ -8,7 +8,7 @@ import TVSeasonEpisodeList from "@/components/Lists/TVSeasonEpisodeList";
 import getASeasonTeaser from "@/api/tvs/getASeasonTeaser";
 import TeaserPlayer from "@/components/TeaserPlayer";
 
-export default async ({ params }) => {
+export default async function page({ params }) {
 	const { id, seasonNumber } = params;
 	const season = await getATVSeason(id, seasonNumber);
 	const credits = await getATVSeasonCredits(id, seasonNumber);
@@ -85,4 +85,4 @@ export default async ({ params }) => {
 			)}
 		</>
 	);
-};
+}

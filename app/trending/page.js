@@ -6,9 +6,7 @@ import TrendingNavigator from "@/components/TrendingNavigator";
 import TVList from "@/components/Lists/TVList";
 import Paginator from "@/components/Paginator";
 
-// const result = { page: 1, results: [], total_pages : 1000, total_results : 20000}
-
-export default async ({ searchParams }) => {
+export default async function page({ searchParams }) {
 	const { page } = searchParams;
 
 	const trendingItems = await getTrending("all", page || 1);
@@ -51,4 +49,4 @@ export default async ({ searchParams }) => {
 			/>
 		</>
 	);
-};
+}

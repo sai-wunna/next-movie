@@ -6,7 +6,7 @@ import TVList from "@/components/Lists/TVList";
 import React from "react";
 import Paginator from "@/components/Paginator";
 
-export default async ({ params, searchParams }) => {
+export default async function page({ params, searchParams }) {
 	const { name, id } = params;
 	const { page } = searchParams;
 	const [realName, type] = decodeURIComponent(name).split("__");
@@ -39,4 +39,4 @@ export default async ({ params, searchParams }) => {
 			)}
 		</>
 	);
-};
+}

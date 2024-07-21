@@ -86,7 +86,7 @@ export const MovieItem = ({ movie }) => (
 	</div>
 );
 
-export default ({ movies }) => {
+export default function MovieList({ movies }) {
 	return (
 		<>
 			{movies && typeof movies === "object" ? (
@@ -102,4 +102,4 @@ export default ({ movies }) => {
 			)}
 		</>
 	);
-};
+}

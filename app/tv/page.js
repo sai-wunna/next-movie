@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import React from "react";
 
-export default async ({ searchParams }) => {
+export default async function page({ searchParams }) {
 	const { prefer, page } = searchParams;
 
 	const preference =
@@ -79,4 +79,4 @@ export default async ({ searchParams }) => {
 			)}
 		</>
 	);
-};
+}

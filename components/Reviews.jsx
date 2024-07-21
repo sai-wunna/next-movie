@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 
-export default ({ type, id }) => {
+export default function Reviews({ type, id }) {
 	const [reviews, setReviews] = useState([]);
 	const [page, setPage] = useState(1);
 	const [loading, setLoading] = useState(false);
@@ -84,4 +84,4 @@ export default ({ type, id }) => {
 			</div>
 		</div>
 	);
-};
+}

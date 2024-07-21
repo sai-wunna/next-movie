@@ -3,7 +3,7 @@ import BusyServer from "@/components/BusyServer";
 import MovieList from "@/components/Lists/MovieList";
 import Paginator from "@/components/Paginator";
 
-export default async ({ searchParams }) => {
+export default async function page({ searchParams }) {
 	const { query, include_adult, primary_release_year, language, page } =
 		searchParams;
 
@@ -34,4 +34,4 @@ export default async ({ searchParams }) => {
 			)}
 		</>
 	);
-};
+}

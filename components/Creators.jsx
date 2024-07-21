@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default ({ creators }) => {
+export default function Creators({ creators }) {
 	return (
 		<div className="my-10 space-y-4">
 			<div className="flex flex-wrap gap-2 my-1">
@@ -38,4 +38,4 @@ export default ({ creators }) => {
 			</div>
 		</div>
 	);
-};
+}

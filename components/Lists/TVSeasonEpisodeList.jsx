@@ -89,7 +89,7 @@ const Episode = ({ episode, tvId }) => {
 	);
 };
 
-export default ({ tvId, episodes }) => {
+export default function TVSeasonEpisodeList({ tvId, episodes }) {
 	return (
 		<div className="container mx-auto py-8">
 			<h3 className="text-2xl font-bold mb-4">Episodes</h3>
@@ -121,4 +121,4 @@ export default ({ tvId, episodes }) => {
 			</div>
 		</div>
 	);
-};
+}

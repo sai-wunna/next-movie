@@ -7,7 +7,7 @@ import TeaserPlayer from "@/components/TeaserPlayer";
 import Image from "next/image";
 import React from "react";
 
-export default async ({ params }) => {
+export default async function page({ params }) {
 	const { id, seasonNumber, episodeNumber } = params;
 
 	const episode = await getAnEpisode(id, seasonNumber, episodeNumber);
@@ -85,4 +85,4 @@ export default async ({ params }) => {
 			)}
 		</>
 	);
-};
+}

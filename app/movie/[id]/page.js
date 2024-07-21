@@ -8,7 +8,7 @@ import TeaserPlayer from "@/components/TeaserPlayer";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
-export default async ({ params }) => {
+export default async function page({ params }) {
 	const { id } = params;
 	const movie = await getAMovie(id);
 	const credits = await getMovieCredits(id);
@@ -110,4 +110,4 @@ export default async ({ params }) => {
 			)}
 		</>
 	);
-};
+}

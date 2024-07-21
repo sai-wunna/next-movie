@@ -2,7 +2,7 @@ import { FireIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
-export default ({ crew }) => {
+export default function Crew({ crew }) {
 	return (
 		<div className="my-10 space-y-4">
 			<h3 className="my-2 text-xl font-bold">Crew</h3>
@@ -53,4 +53,4 @@ export default ({ crew }) => {
 			</div>
 		</div>
 	);
-};
+}

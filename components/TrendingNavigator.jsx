@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FireIcon } from "@heroicons/react/24/outline";
 
-export default ({ path }) => {
+export default function TrendingNavigator({ path }) {
 	return (
 		<div className=" mb-4 pb-4 border-b">
 			<div className="flex items-center justify-center mb-4">
@@ -37,4 +37,4 @@ export default ({ path }) => {
 			</div>
 		</div>
 	);
-};
+}

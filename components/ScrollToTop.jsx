@@ -6,7 +6,7 @@ import {
 	ArrowLongUpIcon,
 } from "@heroicons/react/24/outline";
 
-export const ScrollToTop = () => {
+export default function ScrollToTop() {
 	const [toTop, setToTop] = useState(true);
 
 	const scrollListener = () => {
@@ -46,4 +46,4 @@ export const ScrollToTop = () => {
 			<ArrowLongDownIcon className="h-6 w-6" />
 		</Button>
 	);
-};
+}

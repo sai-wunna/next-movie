@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import React from "react";
 
-export default () => {
+export default function page() {
 	return (
 		<div className="relative p-5">
 			{/* Background Icons */}
@@ -58,4 +58,4 @@ export default () => {
 			</div>
 		</div>
 	);
-};
+}

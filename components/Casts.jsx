@@ -2,7 +2,7 @@ import { FireIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
-export default ({ cast }) => {
+export default function Cast({ cast }) {
 	return (
 		<div className="my-10 space-y-4">
 			<h3 className="my-2 text-xl font-bold">Casts</h3>
@@ -46,4 +46,4 @@ export default ({ cast }) => {
 			</div>
 		</div>
 	);
-};
+}

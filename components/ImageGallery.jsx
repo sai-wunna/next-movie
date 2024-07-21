@@ -1,7 +1,7 @@
 import { StarIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-export default ({ images, owner }) => {
+export default function ImageGallery({ images, owner }) {
 	return (
 		<div className="container mx-auto p-6">
 			<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -28,4 +28,4 @@ export default ({ images, owner }) => {
 			</div>
 		</div>
 	);
-};
+}

@@ -6,7 +6,7 @@ import TVList from "@/components/Lists/TVList";
 import React from "react";
 import Image from "next/image";
 
-export default async ({ params }) => {
+export default async function page({ params }) {
 	const { id } = params;
 	const person = await getAPerson(id);
 	const movies = await getAPersonMovieCredits(id);
@@ -47,4 +47,4 @@ export default async ({ params }) => {
 			)}
 		</div>
 	);
-};
+}

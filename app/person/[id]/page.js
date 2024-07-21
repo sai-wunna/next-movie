@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async ({ params }) => {
+export default async function page({ params }) {
 	const { id } = params;
 	const person = await getAPerson(id);
 	const images = await getAPersonImages(id);
@@ -72,4 +72,4 @@ export default async ({ params }) => {
 			)}
 		</div>
 	);
-};
+}

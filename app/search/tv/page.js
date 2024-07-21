@@ -3,7 +3,7 @@ import BusyServer from "@/components/BusyServer";
 import TVList from "@/components/Lists/TVList";
 import Paginator from "@/components/Paginator";
 
-export default async ({ searchParams }) => {
+export default async function page({ searchParams }) {
 	const { query, include_adult, first_air_date_year, language, page } =
 		searchParams;
 
@@ -34,4 +34,4 @@ export default async ({ searchParams }) => {
 			)}
 		</>
 	);
-};
+}

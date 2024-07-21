@@ -81,7 +81,7 @@ const Person = ({ person }) => {
 	);
 };
 
-export default ({ people }) => {
+export default function PeopleList({ people }) {
 	return (
 		<>
 			{people.length < 1 ? (
@@ -95,4 +95,4 @@ export default ({ people }) => {
 			)}
 		</>
 	);
-};
+}

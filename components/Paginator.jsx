@@ -9,7 +9,7 @@ import {
 	PaginationPrevious,
 } from "@/components/ui/pagination";
 
-export default ({ path, currentPage, totalPages }) => {
+export default function Paginator({ path, currentPage, totalPages }) {
 	return (
 		<Pagination>
 			<PaginationContent>
@@ -45,4 +45,4 @@ export default ({ path, currentPage, totalPages }) => {
 			</PaginationContent>
 		</Pagination>
 	);
-};
+}

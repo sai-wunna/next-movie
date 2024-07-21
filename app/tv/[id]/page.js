@@ -10,7 +10,7 @@ import getTVTeaser from "@/api/tvs/getTVTeaser";
 import TeaserPlayer from "@/components/TeaserPlayer";
 import Reviews from "@/components/Reviews";
 
-export default async ({ params }) => {
+export default async function page({ params }) {
 	const { id } = params;
 	const tv = await getATV(id);
 	const credits = await getTVCredits(id);
@@ -128,4 +128,4 @@ export default async ({ params }) => {
 			)}
 		</>
 	);
-};
+}

@@ -2,7 +2,7 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import React, { useEffect, useState } from "react";
 
-export default () => {
+export default function ThemeToggler() {
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
 	const toggleTheme = () => {
@@ -26,4 +26,4 @@ export default () => {
 			)}
 		</button>
 	);
-};
+}

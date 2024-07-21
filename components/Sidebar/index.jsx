@@ -26,7 +26,7 @@ function GenreList({ genres, type }) {
 	);
 }
 
-export default async () => {
+export default async function Sidebar() {
 	const movieGenres = await getMovieGenres();
 	const tvGenres = await getTVGenres();
 
@@ -47,4 +47,4 @@ export default async () => {
 			)}
 		</aside>
 	);
-};
+}

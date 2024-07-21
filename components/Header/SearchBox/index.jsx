@@ -39,7 +39,7 @@ async function handleSearch(formData) {
 	return redirect(path);
 }
 
-export default () => {
+export default function SearchBox() {
 	return (
 		<Popover>
 			<PopoverTrigger asChild>
@@ -146,4 +146,4 @@ export default () => {
 			</PopoverContent>
 		</Popover>
 	);
-};
+}

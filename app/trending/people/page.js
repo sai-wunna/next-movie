@@ -5,7 +5,7 @@ import Paginator from "@/components/Paginator";
 import TrendingNavigator from "@/components/TrendingNavigator";
 import React from "react";
 
-export default async ({ searchParams }) => {
+export default async function page({ searchParams }) {
 	const { page } = searchParams;
 	const trendingPeople = await getTrending("person", page || 1);
 
@@ -26,4 +26,4 @@ export default async ({ searchParams }) => {
 			)}
 		</>
 	);
-};
+}

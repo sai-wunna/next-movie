@@ -7,7 +7,7 @@ import {
 import { PlayIcon } from "@heroicons/react/24/outline";
 import { Button } from "./ui/button";
 
-export default ({ teaser }) => {
+export default function TeaserPlayer({ teaser }) {
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
@@ -33,4 +33,4 @@ export default ({ teaser }) => {
 			</DialogContent>
 		</Dialog>
 	);
-};
+}
