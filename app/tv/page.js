@@ -1,4 +1,4 @@
-import getTVs from "@/api/tvs/getTVs";
+import getTVs from "@/tmdbAPIs/tvs/getTVs";
 import BusyServer from "@/components/BusyServer";
 import TVlList from "@/components/Lists/TVList";
 import Paginator from "@/components/Paginator";

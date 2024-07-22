@@ -1,5 +1,5 @@
-import getAnEpisode from "@/api/tvs/getAnEpisode";
-import getAnEpisodeTeaser from "@/api/tvs/getAnEpisodeTeaser";
+import getAnEpisode from "@/tmdbAPIs/tvs/getAnEpisode";
+import getAnEpisodeTeaser from "@/tmdbAPIs/tvs/getAnEpisodeTeaser";
 import BusyServer from "@/components/BusyServer";
 import Casts from "@/components/Casts";
 import Crew from "@/components/Crew";

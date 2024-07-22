@@ -1,4 +1,4 @@
-import getTrending from "@/api/general/getTrending";
+import getTrending from "@/tmdbAPIs/general/getTrending";
 import BusyServer from "@/components/BusyServer";
 import PeopleList from "@/components/Lists/PeopleList";
 import Paginator from "@/components/Paginator";

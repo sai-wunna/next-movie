@@ -1,4 +1,4 @@
-import getMovies from "@/api/movies/getMovies";
+import getMovies from "@/tmdbAPIs/movies/getMovies";
 import BusyServer from "@/components/BusyServer";
 import MovieList from "@/components/Lists/MovieList";
 import Paginator from "@/components/Paginator";

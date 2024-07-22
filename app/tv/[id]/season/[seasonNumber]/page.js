@@ -1,11 +1,11 @@
-import getATVSeason from "@/api/tvs/getATVSeason";
-import getATVSeasonCredits from "@/api/tvs/getATVSeasonCredits";
+import getATVSeason from "@/tmdbAPIs/tvs/getATVSeason";
+import getATVSeasonCredits from "@/tmdbAPIs/tvs/getATVSeasonCredits";
 import Casts from "@/components/Casts";
 import BusyServer from "@/components/BusyServer";
 import Image from "next/image";
 import Crew from "@/components/Crew";
 import TVSeasonEpisodeList from "@/components/Lists/TVSeasonEpisodeList";
-import getASeasonTeaser from "@/api/tvs/getASeasonTeaser";
+import getASeasonTeaser from "@/tmdbAPIs/tvs/getASeasonTeaser";
 import TeaserPlayer from "@/components/TeaserPlayer";
 
 export default async function page({ params }) {

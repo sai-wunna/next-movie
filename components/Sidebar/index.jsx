@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import getMovieGenres from "@/api/movies/getMovieGenres";
-import getTVGenres from "@/api/tvs/getTVGenres";
+import getMovieGenres from "@/tmdbAPIs/movies/getMovieGenres";
+import getTVGenres from "@/tmdbAPIs/tvs/getTVGenres";
 import PlayIcon from "@heroicons/react/24/solid/PlayIcon";
 import BusyServer from "../BusyServer";
 

@@ -1,5 +1,5 @@
-import getGenreMovies from "@/api/movies/getGenreMovies";
-import getGenreTV from "@/api/tvs/getGenreTV";
+import getGenreMovies from "@/tmdbAPIs/movies/getGenreMovies";
+import getGenreTV from "@/tmdbAPIs/tvs/getGenreTV";
 import BusyServer from "@/components/BusyServer";
 import MovieList from "@/components/Lists/MovieList";
 import TVList from "@/components/Lists/TVList";

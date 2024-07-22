@@ -1,20 +1,22 @@
-import getATV from "@/api/tvs/getATV";
-import getTVCredits from "@/api/tvs/getTVCredits";
+import getATV from "@/tmdbAPIs/tvs/getATV";
+import getTVCredits from "@/tmdbAPIs/tvs/getTVCredits";
 import Casts from "@/components/Casts";
 import Creators from "@/components/Creators";
 import { Badge } from "@/components/ui/badge";
 import TVSeasonList from "@/components/Lists/TVSeasonList";
 import Image from "next/image";
 import BusyServer from "@/components/BusyServer";
-import getTVTeaser from "@/api/tvs/getTVTeaser";
+import getTVTeaser from "@/tmdbAPIs/tvs/getTVTeaser";
 import TeaserPlayer from "@/components/TeaserPlayer";
 import Reviews from "@/components/Reviews";
+import getReviews from "@/tmdbAPIs/general/getReviews";
 
 export default async function page({ params }) {
 	const { id } = params;
 	const tv = await getATV(id);
 	const credits = await getTVCredits(id);
 	const teaserData = await getTVTeaser(id);
+	const reviews = await getReviews("tv", id, 1);
 
 	return (
 		<>
@@ -121,7 +123,14 @@ export default async function page({ params }) {
 							<Creators creators={tv.created_by} />
 						</div>
 					</div>
-					<Reviews type={"tv"} id={id} />
+					<Reviews
+						reviews={reviews.results}
+						moreReviewsRoute={
+							reviews.total_pages > 1
+								? `/tv/${id}/reviews?page=2`
+								: null
+						}
+					/>
 					<TVSeasonList seasons={tv.seasons} tvId={id} />
 					<Casts cast={credits.cast} />
 				</div>

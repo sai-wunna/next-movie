@@ -1,5 +1,5 @@
-import getAPerson from "@/api/persons/getAPerson";
-import getAPersonImages from "@/api/persons/getAPersonImages";
+import getAPerson from "@/tmdbAPIs/persons/getAPerson";
+import getAPersonImages from "@/tmdbAPIs/persons/getAPersonImages";
 import BusyServer from "@/components/BusyServer";
 import ImageGallery from "@/components/ImageGallery";
 import { PlayIcon } from "@heroicons/react/24/outline";

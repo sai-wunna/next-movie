@@ -1,4 +1,4 @@
-import searchPerson from "@/api/persons/searchPerson";
+import searchPerson from "@/tmdbAPIs/persons/searchPerson";
 import BusyServer from "@/components/BusyServer";
 import PeopleList from "@/components/Lists/PeopleList";
 import Paginator from "@/components/Paginator";

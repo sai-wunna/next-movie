@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import {
 	ArrowLongDownIcon,
@@ -9,7 +9,7 @@ import {
 export default function ScrollToTop() {
 	const [toTop, setToTop] = useState(true);
 
-	const scrollListener = () => {
+	const scrollListener = useCallback(() => {
 		if (window.scrollY > 3000) {
 			if (toTop) {
 				setToTop(false);
@@ -19,7 +19,7 @@ export default function ScrollToTop() {
 				setToTop(true);
 			}
 		}
-	};
+	}, []);
 
 	useEffect(() => {
 		window.addEventListener("scroll", scrollListener);

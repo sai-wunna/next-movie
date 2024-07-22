@@ -1,18 +1,20 @@
-import getAMovie from "@/api/movies/getAMovie";
-import getAMovieTeaser from "@/api/movies/getAMovieTeaser";
-import getMovieCredits from "@/api/movies/getMovieCredits";
+import getAMovie from "@/tmdbAPIs/movies/getAMovie";
+import getAMovieTeaser from "@/tmdbAPIs/movies/getAMovieTeaser";
+import getMovieCredits from "@/tmdbAPIs/movies/getMovieCredits";
 import BusyServer from "@/components/BusyServer";
 import Casts from "@/components/Casts";
 import Reviews from "@/components/Reviews";
 import TeaserPlayer from "@/components/TeaserPlayer";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import getReviews from "@/tmdbAPIs/general/getReviews";
 
 export default async function page({ params }) {
 	const { id } = params;
 	const movie = await getAMovie(id);
 	const credits = await getMovieCredits(id);
 	const teaserData = await getAMovieTeaser(id);
+	const reviews = await getReviews("movie", id, 1);
 
 	return (
 		<>
@@ -104,7 +106,14 @@ export default async function page({ params }) {
 							</div>
 						</div>
 					</div>
-					<Reviews type={"movie"} id={id} />
+					<Reviews
+						reviews={reviews.results}
+						moreReviewsRoute={
+							reviews.total_pages > 1
+								? `/movie/${id}/reviews?page=2`
+								: null
+						}
+					/>
 					<Casts cast={credits.cast} />
 				</div>
 			)}

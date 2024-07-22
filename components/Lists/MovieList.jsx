@@ -7,20 +7,19 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-
-const poster = "http://image.tmdb.org/t/p/w342";
+import posterPath from "@/app/constants/posterPath";
 
 export const MovieItem = ({ movie }) => (
 	<div className="max-w-[250px] bg-white rounded transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl group">
 		<div className="relative h-90">
 			<Image
-				src={`${poster}/${movie.poster_path}`}
+				src={`${posterPath}/${movie.poster_path}`}
 				alt={movie.original_title || "image"}
 				width={342}
 				height={513}
 				className="w-full h-full  rounded object-contain group-hover:opacity-50 transition-opacity duration-300"
 				placeholder="blur"
-				blurDataURL={`${poster}/${movie.poster_path}?w=10&h=15`}
+				blurDataURL={`${posterPath}/${movie.poster_path}?w=10&h=15`}
 			/>
 			<div className="overflow-hidden absolute top-0 left-0 w-full h-full bg-gradient-to-t bg-opacity-30 backdrop-blur-md from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
 				<p className="text-white text-sm leading-relaxed">
